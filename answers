@@ -1,0 +1,38 @@
+klasa przedmiotu:
+stworzyć metode associatewithphoto($object photo) -  możemy do niego dorzucać zdjęcie
+link -> id -> ścieżka
+
+
+dodawanie/usuwanie produktu do bazy danych
+
+w obiekcie metoda add/remove/update
+
+metoda statyczna, która będzie dodawać, usuwać obiekt o konkretnym ID
+jedna klasa odpowiedzialna za połączenie do bazy danych
+
+dodawanie do koszyka w klasie zamówienia
+
+klasa użytkownika:
+wszystkie wiadomości muszą być możliwe do przeczytania przez użytkownika.
+prześledzić wszystko metodą CRUD (Create, Read, Update, Delete)
+
+zarejestrować (stworzyć), odczytać można (logowanie), zaktualizować jego dane oraz można go też usunąć.
+
+klasa administrator:
+
+nie trzeba tworzyć admina, odczytywać trzeba, gdyż musimy sprawdzić czy dana osoba jest adminem, bez aktualizacji, nie można również usunąć.
+
+klasa wiadomości:
+
+można stworzyć, trzeba zapisywać, żeby wyświetlić później użytkownikowi.
+
+MSG (content, id, user id-połączone z id w "Users)
+Users (id-połączone z user id w "MSG")
+
+
+klasa zamówienia: 
+
+stworzyć, odczytać, zaktualizować (zmienić stan przez admina), usunąć można (admin).
+
+Orders (user id-odwołuje się do id w "Users")
+

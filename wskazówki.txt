@@ -1,0 +1,55 @@
+0. najpierw baza danych?
+
+1. klasa przedmiotu - przydatne funkcje:
+
+- dodać zdjęcie
+  name: associate with photo
+	stworzyć nową klasę reprezentującą zdjęcie lub link/ścieżka
+
+- dodawanie/usuwanie produktu do/z bazy danych, update
+
+  w obiekcie: add/delete, lub
+  metody statyczne, lub
+  jedna klasa odpowiedzialna za połączenie z bazą danych?
+
+
+2. klasa użytkownika - przydatne funkcje:
+
+- rejestracja
+- logowanie
+- aktualizacja (mail, hasło)
+- usuwanie przez administratora
+- odczyt wiadomości
+- zwracanie koszyka i wszystkie zamówienia
+
+(tabele: Msg i Users, wiele wiadomości do jednego użytkownika, czyli UserID w tabeli Msg do ID w tabeli Users)
+
+
+3. klasa administratora i wiadomości
+
+administrator:
+- nie tworzyć (wrzucić na sztywno do bazy danych)
+- odczyt (w metodzie zaloguj, isAdmin...)
+- nie aktualizować
+- nie usuwać
+
+wiadomości:
+- create + wysyłka: yes
+- read: no
+- update: no
+- delete: no
+
+
+4. klasa zamówienia - przydatne funckje:
+- tworzenie, odczyt (1 lub wszystkie, konkretne ID lub wszystkie)
+- aktualizacja
+- usuwanie przez admina
+
+
+$conn = mysqli_connect("host", "login", etc.)
+$conn->query ("SELECT * FROM users");
+
+$pdo = new PDO("server", "login", etc.)
+$pdo->query("SELECT * FROM users");
+$query->execute();
+$results = $query
